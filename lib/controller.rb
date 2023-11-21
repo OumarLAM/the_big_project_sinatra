@@ -11,9 +11,15 @@ class ApplicationController < Sinatra::Base
         erb :new_gossip
     end
 
-    get '/gossips/:id' do
-        gossip_id = params['id']
-        puts "You are in the gossip #{gossip_id}!"
+    get '/gossips/:id/' do
+        puts  "This is the id #{params['id']}!"
+        gossip = Gossip.find(params['id'])
+
+        if gossip
+            erb :show, locals: { gossip: gossip, id: params['id']}
+        else 
+            puts "Gossip not found"
+        end
     end
 
     post '/gossips/new/' do

@@ -24,4 +24,15 @@ class Gossip
 
         return all_gossips
     end
+
+    def self.find(id)
+        all_gossips = self.all
+        index = id.to_i - 1
+
+        if index >= 0 && index < all_gossips.length
+            all_gossips[index]
+        else
+            nil
+        end
+    end
 end
