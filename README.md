@@ -14,7 +14,7 @@ The Sinatra Gossip Project is a simple web application for managing and displayi
 - [Project Structure](#project-structure)
 - [Usage](#usage)
 - [Sample Gossips](#sample-gossips)
-- [Additional Information](#additional-information)
+- [Contributing](#contributing)
 
 ## Project Structure
 
